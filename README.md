@@ -1,5 +1,14 @@
 ﻿# WatchMyBirds-Data
 
+
+## Scripts overview
+
+- **02_preannotate_v0x.py**
+Automates zero-shot preannotation of bird bounding boxes: reads the metadata CSV, processes images in batches using Grounding DINO (and optional SAM) with ensemble prompts, applies NMS and nested-box filtering (and SAM refinement if enabled), then writes COCO-format annotations back into the CSV.
+
+
+## Results
+
 This dataset (14277 annotated images) is designed to train the models behind [**WatchMyBirds**](https://github.com/arminfabritzek/WatchMyBirds) – a lightweight, customizable object detection system tailored for real-time monitoring. Built with PyTorch and TensorFlow, WatchMyBirds supports live video streaming, automatic frame capture based on detection criteria, and Telegram integration for timely notifications. Images in the dataset may contain different species, and all annotations are provided in COCO format.
 
 Built for **hobbyists, researchers, and wildlife enthusiasts**, WatchMyBirds makes real-time monitoring **accessible and powerful**. 🚀  
